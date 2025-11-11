@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aplikasi-demo
+  namespace: default
+spec:
+  replicas: 2 # Jalankan 2 pod untuk ketersediaan
+  selector:
+    matchLabels:
+      app: aplikasi-demo
+  template:
+    metadata:
+      labels:
+        app: aplikasi-demo
+    spec:
+      containers:
+      - name: web-server
+        # !! GANTI INI !!
+        # Arahkan ke image yang sama dengan yang di-push Jenkins
+        # Ini adalah versi awal. PR akan mengubah tag ini (misal: :2, :3)
+        image: "NAMA_ANDA_DOCKERHUB/aplikasi-demo:1"
+        ports:
+        - containerPort: 8080 # Port dari server.js
