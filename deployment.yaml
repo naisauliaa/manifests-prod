@@ -18,6 +18,6 @@ spec:
         # !! GANTI INI !!
         # Arahkan ke image yang sama dengan yang di-push Jenkins
         # Ini adalah versi awal. PR akan mengubah tag ini (misal: :2, :3)
-        image: "NAMA_ANDA_DOCKERHUB/aplikasi-demo:1"
+        image: "naisaauliaa/aplikasi-demo:1"
         ports:
         - containerPort: 8080 # Port dari server.js
